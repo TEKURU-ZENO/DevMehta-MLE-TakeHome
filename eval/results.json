@@ -1,0 +1,281 @@
+[
+  {
+    "model": "BAAI/bge-small-en-v1.5",
+    "embed_seconds": 1.14,
+    "unique_texts": 169,
+    "company_level": {
+      "queries": 1855,
+      "precision@4": 0.9951,
+      "ndcg@4": 0.9961
+    },
+    "unique_description_level": {
+      "queries": 169,
+      "precision@4": 0.716,
+      "ndcg@4": 0.7207
+    },
+    "cross_lingual_concept_acc@1": {
+      "queries": 73,
+      "accuracy": 0.4658
+    },
+    "top_confusions": [
+      {
+        "query_industry": "Logistics",
+        "neighbour_industry": "Food & Beverage",
+        "count": 11
+      },
+      {
+        "query_industry": "Food & Beverage",
+        "neighbour_industry": "Logistics",
+        "count": 11
+      },
+      {
+        "query_industry": "Hospitality",
+        "neighbour_industry": "Food & Beverage",
+        "count": 9
+      },
+      {
+        "query_industry": "Professional Services",
+        "neighbour_industry": "Technology",
+        "count": 8
+      },
+      {
+        "query_industry": "Construction",
+        "neighbour_industry": "Logistics",
+        "count": 8
+      },
+      {
+        "query_industry": "Food & Beverage",
+        "neighbour_industry": "Retail",
+        "count": 6
+      },
+      {
+        "query_industry": "Manufacturing",
+        "neighbour_industry": "Logistics",
+        "count": 6
+      },
+      {
+        "query_industry": "Healthcare",
+        "neighbour_industry": "Food & Beverage",
+        "count": 5
+      }
+    ],
+    "worst_queries": [
+      {
+        "query": "[Hospitality] Agensi pelancongan umrah dan pelancongan masuk",
+        "precision@4": 0.0,
+        "neighbours": [
+          "[Food & Beverage] Perkhidmatan katering makanan halal untuk majlis (0.788)",
+          "[Food & Beverage] Restoran masakan Melayu dan Cina (0.786)",
+          "[Education] Pusat tuisyen untuk pelajar sekolah rendah dan menengah (0.783)",
+          "[Manufacturing] Pembuatan perabot daripada kayu getah (0.777)"
+        ]
+      },
+      {
+        "query": "[Professional Services] Architectural design and planning services",
+        "precision@4": 0.0,
+        "neighbours": [
+          "[Construction] Renovation and interior fit-out for offices (0.701)",
+          "[Construction] General contractor for residential and commercial buildings (0.696)",
+          "[Construction] Supply and installation of steel structures (0.683)",
+          "[Healthcare] Dental clinic and orthodontic services (0.666)"
+        ]
+      },
+      {
+        "query": "[Healthcare] Farmasi komuniti dan makanan tambahan",
+        "precision@4": 0.0,
+        "neighbours": [
+          "[Food & Beverage] Mengusahakan kedai kopi dan kafe di Melaka (0.803)",
+          "[Logistics] Penghantaran bungkusan ke seluruh Melaka (0.793)",
+          "[Food & Beverage] Mengusahakan kedai kopi dan kafe di Seremban (0.791)",
+          "[Food & Beverage] Perkhidmatan katering makanan halal untuk majlis (0.786)"
+        ]
+      }
+    ]
+  },
+  {
+    "model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+    "embed_seconds": 0.62,
+    "unique_texts": 169,
+    "company_level": {
+      "queries": 1855,
+      "precision@4": 1.0,
+      "ndcg@4": 1.0
+    },
+    "unique_description_level": {
+      "queries": 169,
+      "precision@4": 0.8639,
+      "ndcg@4": 0.8819
+    },
+    "cross_lingual_concept_acc@1": {
+      "queries": 73,
+      "accuracy": 0.9726
+    },
+    "top_confusions": [
+      {
+        "query_industry": "Manufacturing",
+        "neighbour_industry": "Logistics",
+        "count": 9
+      },
+      {
+        "query_industry": "Professional Services",
+        "neighbour_industry": "Construction",
+        "count": 8
+      },
+      {
+        "query_industry": "Construction",
+        "neighbour_industry": "Professional Services",
+        "count": 7
+      },
+      {
+        "query_industry": "Hospitality",
+        "neighbour_industry": "Logistics",
+        "count": 4
+      },
+      {
+        "query_industry": "Food & Beverage",
+        "neighbour_industry": "Hospitality",
+        "count": 4
+      },
+      {
+        "query_industry": "Professional Services",
+        "neighbour_industry": "Technology",
+        "count": 4
+      },
+      {
+        "query_industry": "Technology",
+        "neighbour_industry": "Retail",
+        "count": 4
+      },
+      {
+        "query_industry": "Logistics",
+        "neighbour_industry": "Construction",
+        "count": 4
+      }
+    ],
+    "worst_queries": [
+      {
+        "query": "[Professional Services] Architectural design and planning services",
+        "precision@4": 0.0,
+        "neighbours": [
+          "[Construction] General contractor for residential and commercial buildings (0.546)",
+          "[Construction] Renovation and interior fit-out for offices (0.529)",
+          "[Construction] Kerja-kerja kejuruteraan awam jalan dan saliran (0.508)",
+          "[Construction] Kontraktor am bangunan kediaman dan komersial (0.490)"
+        ]
+      },
+      {
+        "query": "[Logistics] Trucking services for construction materials",
+        "precision@4": 0.0,
+        "neighbours": [
+          "[Construction] General contractor for residential and commercial buildings (0.499)",
+          "[Construction] Supply and installation of steel structures (0.499)",
+          "[Construction] Kerja-kerja kejuruteraan awam jalan dan saliran (0.485)",
+          "[Construction] Civil engineering works for roads and drainage (0.481)"
+        ]
+      },
+      {
+        "query": "[Education] Professional training courses in accounting and finance",
+        "precision@4": 0.25,
+        "neighbours": [
+          "[Professional Services] Accounting, tax and company secretarial services (0.510)",
+          "[Technology] Software development for small business accounting (0.499)",
+          "[Education] Tuition centre for primary and secondary students (0.375)",
+          "[Construction] Pengubahsuaian dan kerja dalaman pejabat (0.356)"
+        ]
+      }
+    ]
+  },
+  {
+    "model": "hash-bow-384",
+    "embed_seconds": 0.02,
+    "unique_texts": 169,
+    "company_level": {
+      "queries": 1855,
+      "precision@4": 1.0,
+      "ndcg@4": 1.0
+    },
+    "unique_description_level": {
+      "queries": 169,
+      "precision@4": 0.7071,
+      "ndcg@4": 0.7109
+    },
+    "cross_lingual_concept_acc@1": {
+      "queries": 73,
+      "accuracy": 0.1781
+    },
+    "top_confusions": [
+      {
+        "query_industry": "Construction",
+        "neighbour_industry": "Technology",
+        "count": 12
+      },
+      {
+        "query_industry": "Healthcare",
+        "neighbour_industry": "Professional Services",
+        "count": 7
+      },
+      {
+        "query_industry": "Food & Beverage",
+        "neighbour_industry": "Construction",
+        "count": 6
+      },
+      {
+        "query_industry": "Professional Services",
+        "neighbour_industry": "Healthcare",
+        "count": 5
+      },
+      {
+        "query_industry": "Technology",
+        "neighbour_industry": "Professional Services",
+        "count": 5
+      },
+      {
+        "query_industry": "Logistics",
+        "neighbour_industry": "Technology",
+        "count": 5
+      },
+      {
+        "query_industry": "Food & Beverage",
+        "neighbour_industry": "Manufacturing",
+        "count": 5
+      },
+      {
+        "query_industry": "Professional Services",
+        "neighbour_industry": "Technology",
+        "count": 4
+      }
+    ],
+    "worst_queries": [
+      {
+        "query": "[Hospitality] Agensi pelancongan umrah dan pelancongan masuk",
+        "precision@4": 0.0,
+        "neighbours": [
+          "[Construction] Kontraktor am bangunan kediaman dan komersial (0.433)",
+          "[Logistics] Agensi penghantaran fret dan kastam (0.316)",
+          "[Technology] Mobile app development for e-commerce clients (0.267)",
+          "[Healthcare] Farmasi komuniti dan makanan tambahan (0.158)"
+        ]
+      },
+      {
+        "query": "[Technology] Cloud hosting and managed IT services",
+        "precision@4": 0.0,
+        "neighbours": [
+          "[Professional Services] Architectural design and planning services (0.447)",
+          "[Healthcare] Dental clinic and orthodontic services (0.447)",
+          "[Professional Services] Accounting, tax and company secretarial services (0.408)",
+          "[Professional Services] Recruitment and staffing agency (0.250)"
+        ]
+      },
+      {
+        "query": "[Logistics] Cold chain transport and storage of frozen goods",
+        "precision@4": 0.0,
+        "neighbours": [
+          "[Agriculture] Durian orchard and fruit export (0.316)",
+          "[Manufacturing] Production of rubber gloves for export (0.289)",
+          "[Retail] Retail of textiles and baju kurung (0.289)",
+          "[Construction] Supply and installation of steel structures (0.289)"
+        ]
+      }
+    ]
+  }
+]
